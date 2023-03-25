@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Navigation from '../components/Navigation.astro'
+---
+
+<Layout title="Karina's blog">
+  <div id='bg' class='px-7 lg:px-16'>
+    <Navigation />
+    <main>
+      <h1
+        class='text-center md:text-left text-6xl lg:text-8xl mt-14 text-neutral-300 font-["Playfair_Display"]'
+      >
+        Bienvenido a mi blog
+      </h1>
+
+      <div
+        class='mt-14 flex items-center justify-between flex-col md:flex-row gap-10'
+      >
+        <p
+          class='text-center md:text-left text-xl md:text-3xl max-w-[40ch] font-["Arapey"]'
+        >
+          Un lugar para crecer y conectar. Unete a mi jornada de auto
+          descubrimiento desvelando el poder de las palabras
+        </p>
+
+        <a
+          class='md:mr-20 px-4 py-2 md:px-6 md:py-3 border-[.2rem] border-neutral-300 rounded-sm md:text-xl shadow-2xl cursor-pointer'
+          href='/blog'
+        >
+          Empieza a leer <span class='inline-block'>→</span>
+        </a>
+      </div>
+    </main>
+    <div class='inline-block animate-pulse absolute bottom-0 left-1/2'>
+      <span class='text-4xl font-[50]'>↡</span>
+    </div>
+  </div>
+
+  <!-- Newsletter promo -->
+
+  <section class='bg-[#FEEBD9] text-black'>
+    <div class='flex flex-col md:flex-row justify-center md:justify-between gap-3 md:items-end mx-7 md:mx-16 pb-5'>
+      <div class=''>
+        <h2 class='text-4xl md:text-6xl text-center md:text-left font-["Quattrocento"] mt-5'>
+          Newsletter
+        </h2>
+        <p class='font-["Maitree"] text-lg md:w-9/12'>
+          Suscríbete al newsletter y te mantendré al tanto de cuando suba nuevo
+          contenido.
+        </p>
+      </div>
+
+      <form class='flex flex-row md:flex-col justify-center'>
+        <input type='text' placeholder='Tu correo' class='w-full px-6 py-2 md:mb-3 bg-slate-50 rounded-sm' />
+        <button type='submit' class='text-white bg-black w-full px-6 py-2 rounded-sm'>Suscribirme</button>
+      </form>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap'); */
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Maitree:wght@300&display=swap');
+
+  #bg {
+    background-color: #7b7b7b;
+    background-image: url('https://res.cloudinary.com/dkjanvewl/image/upload/c_scale,e_blur:250,h_600,w_1200/v1679064839/bg_jscebr.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+    height: 100dvh;
+  }
+
+  a span {
+    transition: all ease 0.3s;
+  }
+
+  a:hover {
+    background: #ffffe3;
+    border-color: #ffffe3;
+    color: #000;
+  }
+
+  a:hover span {
+    transform: translateX(12px);
+  }
+</style>

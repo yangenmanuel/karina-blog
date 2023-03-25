@@ -1,0 +1,16 @@
+---
+import Layout from './Layout.astro'
+
+const { frontmatter } = Astro.props
+---
+
+<Layout title={frontmatter.title}>
+  <div class='flex justify-between items-center mt-3'>
+    <a href='/blog' class='px-2 text-2xl flex items-center'>←</a>
+  </div>
+  <h1>{frontmatter.title}</h1>
+  <img src={frontmatter.image.url} width='300' alt={frontmatter.image.alt} />
+  <p>{frontmatter.description}</p>
+
+  <slot />
+</Layout>

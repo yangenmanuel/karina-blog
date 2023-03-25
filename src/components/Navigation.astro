@@ -1,0 +1,24 @@
+---
+---
+
+<nav class='md:ml-5 py-7 flex gap-6 items-center justify-center md:justify-start'>
+  <span class='text-5xl font-["Allura"]'>K</span>
+  <a href='/'>Inicio</a>
+  <a href='/blog'>Blog</a>
+  <a href='/about'>Quien soy?</a>
+</nav>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+</style>
+
+<script>
+  const location = window.location.pathname
+  const els = document.querySelectorAll('a')
+
+  els.forEach((el, i) => {
+    if (el.getAttribute('href') === location) {
+      el.classList.add('text-yellow-500')
+    }
+  })
+</script>

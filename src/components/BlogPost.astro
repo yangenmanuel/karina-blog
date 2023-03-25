@@ -1,0 +1,14 @@
+---
+export interface Props {
+  url: string,
+  title: string,
+  description: string
+}
+
+const { url, title, description } = Astro.props
+---
+
+<a class='p-4 bg-cyan-900 rounded-lg m-4 block' href={url}>
+  <h2 class='text-xl'>{title}</h2>
+  <p>{description}</p>
+</a>
