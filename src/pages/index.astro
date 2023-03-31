@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Navigation from '../components/Navigation.astro'
+import Divider from '../components/icons/Divider.astro';
+import { Instagram, Twitter, LeanPub } from '../components/icons/MediaList';
 ---
 
 <Layout title="Karina's blog">
@@ -55,6 +57,21 @@ import Navigation from '../components/Navigation.astro'
         <button type='submit' class='text-white bg-black flex-1 px-6 py-2 rounded-sm'>Suscribirme</button>
       </form>
     </div>
+
+    <div class='mx-auto w-3/5 py-3 md:w-1/4'>
+      <div class='rotate-180 mb-1'>
+        <Divider/>
+      </div>
+      <div class='flex justify-around'>
+        <Instagram/>
+        <Twitter/>
+        <LeanPub/>
+      </div>
+      <div class="">
+        <Divider/>
+     </div>
+    </div>
+   
   </section>
 </Layout>
 
