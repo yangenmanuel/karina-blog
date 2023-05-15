@@ -10,9 +10,43 @@
   <a href='/about'>Quien soy?</a>
 </nav>
 
+<div id='block' 
+class='absolute backdrop-blur-lg bg-white/10 -z-10 rounded-md left-0 top-0
+      translate-x-[var(--left)] 
+      translate-y-[var(--top)]
+      w-[var(--width)]
+      h-[var(--height)]
+      opacity-0
+      transition-transform duration-200
+      ease-in-out
+'>
+
+</div>
+
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 </style>
+
+<script>
+  const listItems = document.querySelectorAll('nav a')
+  const block = document.getElementById('block')
+
+  listItems.forEach((item) => {
+    item.addEventListener('mouseenter', () => {
+      const { top, left, width, height } = item.getBoundingClientRect()
+      
+      block.style.setProperty("--top", `${top}px`)
+      block.style.setProperty("--left", `${left}px`)
+      block.style.setProperty("--width", `${width}px`)
+      block.style.setProperty("--height", `${height}px`)
+      block.style.opacity = '1'
+    })
+
+    item.addEventListener('mouseleave', () => {
+      block.style.opacity = "0"
+    })
+  })
+</script>
 
 <script>
   const location = window.location.pathname
