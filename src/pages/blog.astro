@@ -5,9 +5,9 @@ import Navigation from '../components/Navigation.astro'
 
 const allPosts = await Astro.glob('../pages/posts/*.md')
 ---
-
-<Layout title='Blog!' bg='bg-[#FEEBD9]'>
-  <Navigation />
+<!-- #FEEBD9 -->
+<Layout title='Blog!' bg='bg-gradient-to-r from-[#FEEBD9] to-[#FFDBB8] to-90%'>
+  <Navigation navColor="text-black/80" blockBgColor="bg-black/5" />
 
   <main class="md:w-3/4 mx-auto">
     <h1 class='text-2xl'>Latest blog posts 🔥</h1>

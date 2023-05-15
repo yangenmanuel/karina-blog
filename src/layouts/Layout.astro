@@ -15,15 +15,13 @@ const { title, bg } = Astro.props
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class={bg}>
+  <body class={`${bg}`}>
     <slot />
   </body>
 </html>
 <style>
   body {
-    color: rgb(212, 212, 212);
     scrollbar-width: none;
-    /* background-color: #FEEBD9; */
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
