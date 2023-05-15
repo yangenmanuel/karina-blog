@@ -1,10 +1,9 @@
 ---
 export interface Props {
   title: string,
-  bgUrl?: string
+  bg: string
 }
-
-const { title, bgUrl } = Astro.props
+const { title, bg } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -16,7 +15,7 @@ const { title, bgUrl } = Astro.props
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body style=`background-image: url(${bgUrl})`>
+  <body class={bg}>
     <slot />
   </body>
 </html>

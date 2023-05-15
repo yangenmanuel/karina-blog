@@ -1,15 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Header from '../components/Header.astro';
 import BlogPost from '../components/BlogPost.astro'
+import Navigation from '../components/Navigation.astro'
 
 const allPosts = await Astro.glob('../pages/posts/*.md')
 ---
 
-<Layout title='Blog!'>
-  <Header />
+<Layout title='Blog!' bg='bg-[#FEEBD9]'>
+  <Navigation />
 
-  <main>
+  <main class="md:w-3/4 mx-auto">
     <h1 class='text-2xl'>Latest blog posts 🔥</h1>
     {
       allPosts.map((post) => {
